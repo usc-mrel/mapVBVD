@@ -155,7 +155,7 @@ if ~exist('filename','var') || isempty(filename)
     end
     filename=[pathname fname];
 else
-    if ischar(filename)
+    if ischar(filename) || isstring(filename)
         % assume that complete path is given
         % BT: If file ends with hdr, we assume it is a heador only file,
         % will skip reading MDH.
